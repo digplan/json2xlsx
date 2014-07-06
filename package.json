@@ -15,5 +15,5 @@
     "url": "git://github.com/dpweb/json2xlsx.git"
   },
   "main": "json2xlsx.js",
-  "version": "0.0.2"
+  "version": "0.0.3"
 }

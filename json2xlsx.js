@@ -1,4 +1,4 @@
-module.exports = function(filename, arr){
+module.exports = function(filename, sheetname){
 
 XLSX = require('xlsx');
 FS = require('fs');
@@ -12,7 +12,12 @@ process.stdin.on('readable', function(){
 process.stdin.on('end', processData);
 
 function processData(){
-  var o = arr || JSON.parse(indata);
+  var o = JSON.parse(indata);
+  if(o.push && sheetname){
+  	var ob = {};
+  	ob[sheetname] = o;
+  	o = ob;
+  }
   var wb = FS.existsSync(filename) ? XLSX.readFile(filename) : new Workbook();
 
   for(ws_name in o){
