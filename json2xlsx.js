@@ -1,6 +1,8 @@
 module.exports = function(filename, arr){
 
 XLSX = require('xlsx');
+FS = require('fs');
+
 //var workbook = XLSX.readFile('txt.xlsx');
 //var sheets = workbook.Props.SheetNames;
 var indata = '';
@@ -11,7 +13,8 @@ process.stdin.on('end', processData);
 
 function processData(){
   var o = arr || JSON.parse(indata);
-  var wb = new Workbook();
+  var wb = FS.existsSync(filename) ? XLSX.readFile(filename) : new Workbook();
+
   for(ws_name in o){
   	wb.SheetNames.push(ws_name);
     var twodarr = o[ws_name];
