@@ -1,22 +1,28 @@
-module.exports = function(filename, sheetname){
+module.exports = function(filename, sheetname, obj){
 
 XLSX = require('xlsx');
 FS = require('fs');
 
 //var workbook = XLSX.readFile('txt.xlsx');
 //var sheets = workbook.Props.SheetNames;
-var indata = '';
-process.stdin.on('readable', function(){
-  indata += process.stdin.read() || '';
-})
-process.stdin.on('end', processData);
-
+if(!obj){
+  var indata = '';
+  process.stdin.on('readable', function(){
+    indata += process.stdin.read() || '';
+  })
+  process.stdin.on('end', processData);
+} else {
+  processData();
+}
 function processData(){
-  var o = JSON.parse(indata);
-  if(o.push && sheetname){
+  var t = obj || JSON.parse(indata);
+
+  if(t.push && sheetname){
   	var ob = {};
-  	ob[sheetname] = o;
+  	ob[sheetname] = t;
   	o = ob;
+  } else {
+  	o = t;
   }
   var wb = FS.existsSync(filename) ? XLSX.readFile(filename) : new Workbook();
 
@@ -26,7 +32,7 @@ function processData(){
     if(!twodarr[0].push)
     	twodarr = convertObjArray(twodarr);
     var ws = sheet_from_array_of_arrays(twodarr);
-  	wb.Sheets[ws_name] = ws;
+  	wb.Sheets[sheetname || ws_name] = ws;
   	//console.log(ws_name)
   }
   XLSX.writeFile(wb, filename);
