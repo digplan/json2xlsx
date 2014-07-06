@@ -27,13 +27,15 @@ function processData(){
   var wb = FS.existsSync(filename) ? XLSX.readFile(filename) : new Workbook();
 
   for(ws_name in o){
-  	wb.SheetNames.push(ws_name);
+    var sheetdispname = sheetname || ws_name;
+  	wb.SheetNames.push(sheetdispname);
     var twodarr = o[ws_name];
+    if(!twodarr[0]) continue;
     if(!twodarr[0].push)
     	twodarr = convertObjArray(twodarr);
     var ws = sheet_from_array_of_arrays(twodarr);
-  	wb.Sheets[sheetname || ws_name] = ws;
-  	//console.log(ws_name)
+  	wb.Sheets[sheetdispname] = ws;
+  	console.log(filename, '/', sheetdispname);
   }
   XLSX.writeFile(wb, filename);
 }
@@ -46,7 +48,7 @@ function convertObjArray(objarray){
   	  row.push(objarray[n][i]);
     arrarr.push(row);
   }
-  console.log(arrarr);
+  console.log(arrarr.length + ' records');
   return arrarr;
 }
 
