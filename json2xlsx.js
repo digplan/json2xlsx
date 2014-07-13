@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-if(exports)
-  exports = {write: writeXLSX,read: readXLSX}
+if(module && module.exports)
+  module.exports = {write: writeXLSX,read: readXLSX}
 
 if(process.argv[2])
   readXLSX(process.argv[2]);
