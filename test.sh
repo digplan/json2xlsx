@@ -8,4 +8,9 @@ echo '{"work3": [["TRUE",2,3], [4,5,6]], "work4": [{"a": 1, "b":2},{"a":3, "b": 
 
 # Read an Excel file
 node -e "require('./json2xlsx.js').read('file.xlsx')"
+
+# use node
 node ./json2xlsx.js file.xlsx
+
+# global (read xlsx)
+json2xlsx file.xlsx
