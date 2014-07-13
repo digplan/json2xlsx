@@ -1,4 +1,4 @@
-if(require.main && require.main.filename === __filename)
+if(require.main && require.main.filename === __filename){
  module.exports = {
   write: writeXLSX,
   read: readXLSX
