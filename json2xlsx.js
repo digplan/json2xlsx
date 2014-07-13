@@ -1,9 +1,4 @@
-if(require.main && require.main.filename === __filename){
- module.exports = {
-  write: writeXLSX,
-  read: readXLSX
- }
-}
+module && module.exports && module.exports = {write: writeXLSX,read: readXLSX}
 
 if(process.argv[2])
   readXLSX(process.argv[2]);
