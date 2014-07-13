@@ -1,10 +1,20 @@
-module.exports = function(filename, sheetname, order, obj){
+module.exports = {
+  write: writeXLSX,
+  read: readXLSX
+}
+
+if(process.argv[2])
+  readXLSX(process.argv[2]);
+
+function readXLSX(filename){
+  console.log(require('XLSX').readFile(filename).Sheets);
+}
+
+function writeXLSX(filename, sheetname, obj){
 
 XLSX = require('xlsx');
 FS = require('fs');
 
-//var workbook = XLSX.readFile('txt.xlsx');
-//var sheets = workbook.Props.SheetNames;
 if(!obj){
   var indata = '';
   process.stdin.on('readable', function(){
@@ -17,9 +27,8 @@ if(!obj){
 function processData(){
 
   var t = obj || JSON.parse(indata);
-  
-  if(t && t.status != 'failure')
-    t = orderData(t);
+  if(!t || typeof t !== 'object')
+    throw Error('json2xlsx - not an object');
 
   if(t.push && sheetname){
     var ob = {};
@@ -40,7 +49,8 @@ function processData(){
       twodarr = convertObjArray(twodarr);
     var ws = sheet_from_array_of_arrays(twodarr);
     wb.Sheets[sheetdispname] = ws;
-    console.log(filename, '/', sheetdispname);
+    if(process.env.debug)
+      console.log(filename, '/', sheetdispname);
   }
   XLSX.writeFile(wb, filename);
 }
@@ -54,7 +64,8 @@ function convertObjArray(objarray){
       row.push(objarray[n][i]);
     arrarr.push(row);
   }
-  console.log(arrarr.length + ' records');
+  if(process.env.debug)
+    console.log(arrarr.length + ' records');
   return arrarr;
   } catch(e){
       console.log(objarray);
@@ -100,26 +111,6 @@ function Workbook() {
   if(!(this instanceof Workbook)) return new Workbook();
   this.SheetNames = [];
   this.Sheets = {};
-}
-
-function orderData(obj){
-    var newobj = {result: []};
-    if(!obj.result)
-      return console.log(indata);
-    for(var i=0; i<obj.result.length; i++){
-      var oldo = obj.result[i];
-      var newo = {};
-      order.forEach(function(field){
-        if(oldo[field]){
-          newo[field] = oldo[field];
-          delete oldo[field];
-        }
-      })
-      for(j in oldo)
-        newo[j] = oldo[j];
-      newobj.result[i] = newo;
-    }
-    return newobj;
 }
 
 }

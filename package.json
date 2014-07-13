@@ -10,10 +10,16 @@
     "name": "C Borkert",
     "email": "ILIKECHEESE@dpsw.info"
   },
+  "dependencies": {
+    "xlsx": ""
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/dpweb/json2xlsx.git"
   },
   "main": "json2xlsx.js",
-  "version": "0.0.7"
+  "bin": {
+    "json2xlsx": "json2xlsx.js"
+  },
+  "version": "0.1.0"
 }

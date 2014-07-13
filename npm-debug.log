@@ -1,0 +1,155 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'c:\\Program Files (x86)\\nodejs\\node.exe',
+1 verbose cli   'c:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   '.' ]
+2 info using npm@1.2.11
+3 info using node@v0.10.12
+4 verbose read json c:\users\user\desktop\package.json
+5 verbose read json c:\users\user\desktop\package.json
+6 verbose cache add [ '.', null ]
+7 verbose cache add name=undefined spec="." args=[".",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: '.',
+8 verbose parsed url   path: '.',
+8 verbose parsed url   href: '.' }
+9 silly lockFile 3a52ce78- .
+10 verbose lock . C:\Users\User\AppData\Roaming\npm-cache\3a52ce78-.lock
+11 verbose read json package.json
+12 verbose tar pack [ 'C:\\Users\\User\\AppData\\Local\\Temp\\npm-4200\\1405289906107-0.2748806676827371\\tmp.tgz',
+12 verbose tar pack   '.' ]
+13 verbose tarball C:\Users\User\AppData\Local\Temp\npm-4200\1405289906107-0.2748806676827371\tmp.tgz
+14 verbose folder .
+15 info prepublish json2xlsx@0.1.0
+16 silly lockFile 3a52ce78- .
+17 verbose lock . C:\Users\User\AppData\Roaming\npm-cache\3a52ce78-.lock
+18 silly lockFile 74ca801f-06107-0-2748806676827371-tmp-tgz C:\Users\User\AppData\Local\Temp\npm-4200\1405289906107-0.2748806676827371\tmp.tgz
+19 verbose lock C:\Users\User\AppData\Local\Temp\npm-4200\1405289906107-0.2748806676827371\tmp.tgz C:\Users\User\AppData\Roaming\npm-cache\74ca801f-06107-0-2748806676827371-tmp-tgz.lock
+20 silly lockFile 3a52ce78- .
+21 silly lockFile 3a52ce78- .
+22 silly lockFile 74ca801f-06107-0-2748806676827371-tmp-tgz C:\Users\User\AppData\Local\Temp\npm-4200\1405289906107-0.2748806676827371\tmp.tgz
+23 silly lockFile 74ca801f-06107-0-2748806676827371-tmp-tgz C:\Users\User\AppData\Local\Temp\npm-4200\1405289906107-0.2748806676827371\tmp.tgz
+24 verbose tar unpack C:\Users\User\AppData\Local\Temp\npm-4200\1405289906107-0.2748806676827371\tmp.tgz
+25 silly lockFile 7d6ce083-06107-0-2748806676827371-package C:\Users\User\AppData\Local\Temp\npm-4200\1405289906107-0.2748806676827371\package
+26 verbose lock C:\Users\User\AppData\Local\Temp\npm-4200\1405289906107-0.2748806676827371\package C:\Users\User\AppData\Roaming\npm-cache\7d6ce083-06107-0-2748806676827371-package.lock
+27 silly lockFile 74ca801f-06107-0-2748806676827371-tmp-tgz C:\Users\User\AppData\Local\Temp\npm-4200\1405289906107-0.2748806676827371\tmp.tgz
+28 verbose lock C:\Users\User\AppData\Local\Temp\npm-4200\1405289906107-0.2748806676827371\tmp.tgz C:\Users\User\AppData\Roaming\npm-cache\74ca801f-06107-0-2748806676827371-tmp-tgz.lock
+29 silly gunzTarPerm modes [ '755', '644' ]
+30 silly gunzTarPerm extractEntry package.json
+31 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+32 silly gunzTarPerm extractEntry README.md
+33 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+34 silly gunzTarPerm extractEntry json2xlsx.js
+35 silly gunzTarPerm modified mode [ 'json2xlsx.js', 438, 420 ]
+36 silly gunzTarPerm extractEntry file.xlsx
+37 silly gunzTarPerm modified mode [ 'file.xlsx', 438, 420 ]
+38 silly gunzTarPerm extractEntry test.sh
+39 silly gunzTarPerm modified mode [ 'test.sh', 438, 420 ]
+40 verbose read json C:\Users\User\AppData\Local\Temp\npm-4200\1405289906107-0.2748806676827371\package\package.json
+41 silly lockFile 7d6ce083-06107-0-2748806676827371-package C:\Users\User\AppData\Local\Temp\npm-4200\1405289906107-0.2748806676827371\package
+42 silly lockFile 7d6ce083-06107-0-2748806676827371-package C:\Users\User\AppData\Local\Temp\npm-4200\1405289906107-0.2748806676827371\package
+43 silly lockFile 74ca801f-06107-0-2748806676827371-tmp-tgz C:\Users\User\AppData\Local\Temp\npm-4200\1405289906107-0.2748806676827371\tmp.tgz
+44 silly lockFile 74ca801f-06107-0-2748806676827371-tmp-tgz C:\Users\User\AppData\Local\Temp\npm-4200\1405289906107-0.2748806676827371\tmp.tgz
+45 verbose from cache C:\Users\User\AppData\Local\Temp\npm-4200\1405289906107-0.2748806676827371\package\package.json
+46 verbose tar pack [ 'C:\\Users\\User\\AppData\\Roaming\\npm-cache\\json2xlsx\\0.1.0\\package.tgz',
+46 verbose tar pack   'C:\\Users\\User\\AppData\\Local\\Temp\\npm-4200\\1405289906107-0.2748806676827371\\package' ]
+47 verbose tarball C:\Users\User\AppData\Roaming\npm-cache\json2xlsx\0.1.0\package.tgz
+48 verbose folder C:\Users\User\AppData\Local\Temp\npm-4200\1405289906107-0.2748806676827371\package
+49 silly lockFile 7d6ce083-06107-0-2748806676827371-package C:\Users\User\AppData\Local\Temp\npm-4200\1405289906107-0.2748806676827371\package
+50 verbose lock C:\Users\User\AppData\Local\Temp\npm-4200\1405289906107-0.2748806676827371\package C:\Users\User\AppData\Roaming\npm-cache\7d6ce083-06107-0-2748806676827371-package.lock
+51 silly lockFile aadc313f-ache-json2xlsx-0-1-0-package-tgz C:\Users\User\AppData\Roaming\npm-cache\json2xlsx\0.1.0\package.tgz
+52 verbose lock C:\Users\User\AppData\Roaming\npm-cache\json2xlsx\0.1.0\package.tgz C:\Users\User\AppData\Roaming\npm-cache\aadc313f-ache-json2xlsx-0-1-0-package-tgz.lock
+53 silly lockFile 7d6ce083-06107-0-2748806676827371-package C:\Users\User\AppData\Local\Temp\npm-4200\1405289906107-0.2748806676827371\package
+54 silly lockFile 7d6ce083-06107-0-2748806676827371-package C:\Users\User\AppData\Local\Temp\npm-4200\1405289906107-0.2748806676827371\package
+55 silly lockFile aadc313f-ache-json2xlsx-0-1-0-package-tgz C:\Users\User\AppData\Roaming\npm-cache\json2xlsx\0.1.0\package.tgz
+56 silly lockFile aadc313f-ache-json2xlsx-0-1-0-package-tgz C:\Users\User\AppData\Roaming\npm-cache\json2xlsx\0.1.0\package.tgz
+57 silly lockFile fd690d56-pm-cache-json2xlsx-0-1-0-package C:\Users\User\AppData\Roaming\npm-cache\json2xlsx\0.1.0\package
+58 verbose lock C:\Users\User\AppData\Roaming\npm-cache\json2xlsx\0.1.0\package C:\Users\User\AppData\Roaming\npm-cache\fd690d56-pm-cache-json2xlsx-0-1-0-package.lock
+59 silly lockFile fd690d56-pm-cache-json2xlsx-0-1-0-package C:\Users\User\AppData\Roaming\npm-cache\json2xlsx\0.1.0\package
+60 silly lockFile fd690d56-pm-cache-json2xlsx-0-1-0-package C:\Users\User\AppData\Roaming\npm-cache\json2xlsx\0.1.0\package
+61 verbose tar unpack C:\Users\User\AppData\Roaming\npm-cache\json2xlsx\0.1.0\package.tgz
+62 silly lockFile fd690d56-pm-cache-json2xlsx-0-1-0-package C:\Users\User\AppData\Roaming\npm-cache\json2xlsx\0.1.0\package
+63 verbose lock C:\Users\User\AppData\Roaming\npm-cache\json2xlsx\0.1.0\package C:\Users\User\AppData\Roaming\npm-cache\fd690d56-pm-cache-json2xlsx-0-1-0-package.lock
+64 silly lockFile aadc313f-ache-json2xlsx-0-1-0-package-tgz C:\Users\User\AppData\Roaming\npm-cache\json2xlsx\0.1.0\package.tgz
+65 verbose lock C:\Users\User\AppData\Roaming\npm-cache\json2xlsx\0.1.0\package.tgz C:\Users\User\AppData\Roaming\npm-cache\aadc313f-ache-json2xlsx-0-1-0-package-tgz.lock
+66 silly gunzTarPerm modes [ '755', '644' ]
+67 silly gunzTarPerm extractEntry package.json
+68 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+69 silly gunzTarPerm extractEntry README.md
+70 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+71 silly gunzTarPerm extractEntry json2xlsx.js
+72 silly gunzTarPerm modified mode [ 'json2xlsx.js', 438, 420 ]
+73 silly gunzTarPerm extractEntry file.xlsx
+74 silly gunzTarPerm modified mode [ 'file.xlsx', 438, 420 ]
+75 silly gunzTarPerm extractEntry test.sh
+76 silly gunzTarPerm modified mode [ 'test.sh', 438, 420 ]
+77 verbose read json C:\Users\User\AppData\Roaming\npm-cache\json2xlsx\0.1.0\package\package.json
+78 silly lockFile fd690d56-pm-cache-json2xlsx-0-1-0-package C:\Users\User\AppData\Roaming\npm-cache\json2xlsx\0.1.0\package
+79 silly lockFile fd690d56-pm-cache-json2xlsx-0-1-0-package C:\Users\User\AppData\Roaming\npm-cache\json2xlsx\0.1.0\package
+80 silly lockFile aadc313f-ache-json2xlsx-0-1-0-package-tgz C:\Users\User\AppData\Roaming\npm-cache\json2xlsx\0.1.0\package.tgz
+81 silly lockFile aadc313f-ache-json2xlsx-0-1-0-package-tgz C:\Users\User\AppData\Roaming\npm-cache\json2xlsx\0.1.0\package.tgz
+82 silly shasum updated bytes 6304
+83 info shasum 02163331f607ca419973bc38f42dfea8bb4d235b
+83 info shasum C:\Users\User\AppData\Roaming\npm-cache\json2xlsx\0.1.0\package.tgz
+84 verbose from cache C:\Users\User\AppData\Roaming\npm-cache\json2xlsx\0.1.0\package\package.json
+85 verbose chmod C:\Users\User\AppData\Roaming\npm-cache\json2xlsx\0.1.0\package.tgz 644
+86 silly chown skipping for windows C:\Users\User\AppData\Roaming\npm-cache\json2xlsx\0.1.0\package.tgz
+87 silly lockFile 3a52ce78- .
+88 silly resolved [ { name: 'json2xlsx',
+88 silly resolved     description: 'Pipe JSON to Excel spreadsheet',
+88 silly resolved     url: 'http://github.com/dpweb/json2xlsx/',
+88 silly resolved     keywords: [ 'util', 'nodejs' ],
+88 silly resolved     author: { name: 'C Borkert', email: 'ILIKECHEESE@dpsw.info' },
+88 silly resolved     dependencies: { xlsx: '' },
+88 silly resolved     repository: { type: 'git', url: 'git://github.com/dpweb/json2xlsx.git' },
+88 silly resolved     main: 'json2xlsx.js',
+88 silly resolved     bin: { json2xlsx: 'json2xlsx.js' },
+88 silly resolved     version: '0.1.0',
+88 silly resolved     readme: 'Json2XLSX\r\n=========\r\n\r\nProvide or pipe a JSON object to a new Excel XLSX file\r\n\r\nTakes an object with one worksheet (tab) per key, and a 2d array or array of objects\r\nUpdates an existing file if already created\r\n\r\n````\r\n{\r\n\t"worksheet1": [\r\n\t\t[1,2,3],\r\n\t\t[4,5,6]\r\n\t],\r\n\r\n\t"worksheet2": [\r\n\t\t{a: 1, b: 2},\r\n\t\t{a: 3, b: 4}\r\n\t]\r\n}\r\n````\r\n\r\n````\r\n###Write Excel\r\nrequire(\'json2xlsx\').write(filename, sheetname, object [optional instead of piping in]);    \r\nobject is optionally using object instead of pipe    \r\n\r\nor pipe..\r\n\r\necho \'{"work1": [["TRUE",2,3], [4,5,6]], "work2": [{"a": 1, "b":2},{"a":3, "b": 4}]}\'\\\r\n| node -e "require(\'./json2xlsx.js\').write(\'file.xlsx\')"\r\n\r\n# update existing\r\necho \'{"work3": [["TRUE",2,3], [4,5,6]], "work4": [{"a": 1, "b":2},{"a":3, "b": 4}]}\'\\\r\n| node -e "require(\'./json2xlsx.js\').write(\'file.xlsx\')"\r\n\r\n# show additional info about writing (set env variable)\r\n$ debug=1 echo\'{ ...\r\n````\r\n###Read Excel\r\nrequire(\'json2xlsx\').read(\'file.xlsx\');  // {...data...}\r\n',
+88 silly resolved     readmeFilename: 'README.md',
+88 silly resolved     _id: 'json2xlsx@0.1.0',
+88 silly resolved     dist: { shasum: '02163331f607ca419973bc38f42dfea8bb4d235b' },
+88 silly resolved     _from: '.' } ]
+89 info install json2xlsx@0.1.0 into c:\users\user\desktop
+90 info installOne json2xlsx@0.1.0
+91 verbose from cache C:\Users\User\AppData\Roaming\npm-cache\json2xlsx\0.1.0\package\package.json
+92 info c:\users\user\desktop\node_modules\json2xlsx unbuild
+93 verbose read json c:\users\user\desktop\node_modules\json2xlsx\package.json
+94 info preuninstall json2xlsx@0.1.0
+95 info uninstall json2xlsx@0.1.0
+96 verbose true,c:\users\user\desktop\node_modules,c:\users\user\desktop\node_modules unbuild json2xlsx@0.1.0
+97 verbose c:\users\user\desktop,[object Object] binRoot
+98 info c:\users\user\desktop\node_modules\json2xlsx unbuild
+99 verbose read json c:\users\user\desktop\node_modules\json2xlsx\package.json
+100 info preuninstall json2xlsx@0.1.0
+101 info uninstall json2xlsx@0.1.0
+102 verbose true,c:\users\user\desktop\node_modules,c:\users\user\desktop\node_modules unbuild json2xlsx@0.1.0
+103 verbose c:\users\user\desktop,[object Object] binRoot
+104 error error rolling back Error: EBUSY, unlink 'c:\users\user\desktop\json2xlsx'
+104 error error rolling back  json2xlsx@0.1.0 { [Error: EBUSY, unlink 'c:\users\user\desktop\json2xlsx']
+104 error error rolling back   errno: 10,
+104 error error rolling back   code: 'EBUSY',
+104 error error rolling back   path: 'c:\\users\\user\\desktop\\json2xlsx' }
+105 error Error: EBUSY, unlink 'c:\users\user\desktop\json2xlsx'
+106 error If you need help, you may report this log at:
+106 error     <http://github.com/isaacs/npm/issues>
+106 error or email it to:
+106 error     <npm-@googlegroups.com>
+107 error System Windows_NT 6.1.7601
+108 error command "c:\\Program Files (x86)\\nodejs\\node.exe" "c:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "-g" "."
+109 error cwd c:\users\user\desktop\json2xlsx
+110 error node -v v0.10.12
+111 error npm -v 1.2.11
+112 error path c:\users\user\desktop\json2xlsx
+113 error code EBUSY
+114 error errno 10
+115 verbose exit [ 10, true ]
