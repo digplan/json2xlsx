@@ -38,7 +38,7 @@ $ debug=1 ...
 ````
 ###Read Excel
 ````
-require('json2xlsx').read('file.xlsx');  // {...data...}
+require('json2xlsx').read('file.xlsx');  // JSON written to console/stdout
 # or
 $ node ./json2xlsx file.xlsx
 ````
