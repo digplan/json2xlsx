@@ -22,7 +22,9 @@ Updates an existing file if already created
 
 ````
 
-require('json2xlsx')(filename, [sheetname, object]);
+require('json2xlsx')(filename, sheetname, order, object);    
+order is an optional array to order the columns in the spreadsheet    
+object is optionally using object instead of pipe    
 
 or pipe..
 
