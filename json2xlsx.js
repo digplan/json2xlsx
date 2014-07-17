@@ -32,16 +32,20 @@ function writeXLSX(filename, sheetname, obj, order) {
 
   function processData() {
 
-    var t = obj || JSON.parse(indata);
+    try {
+      var t = obj || JSON.parse(indata);
+    } catch(e){
+      return console.log(e);
+    }
+
     if (!t || typeof t !== 'object')
       throw Error('json2xlsx - not an object');
-
-    console.log(t);
 
     if (order)
       t = orderAttr(t, order);
 
-    console.log(t);
+    if(process.env.debug)
+      console.log(t);
 
     if (t.push && sheetname) {
       var ob = {};
