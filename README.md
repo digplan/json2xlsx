@@ -42,3 +42,6 @@ require('json2xlsx').read('file.xlsx');  // JSON written to console/stdout
 # or
 $ node ./json2xlsx file.xlsx
 ````
+
+##Order JSON attributes (to have columns in order in Excel)
+require('json2xlsx').write('name.xlsx', 'sheetname', null, ['first_col_name', 'second_col_name'])
