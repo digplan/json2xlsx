@@ -44,4 +44,6 @@ $ node ./json2xlsx file.xlsx
 ````
 
 ##Order JSON attributes (to have columns in order in Excel)
-require('json2xlsx').write('name.xlsx', 'sheetname', null, ['first_col_name', 'second_col_name'])
+````
+echo "..." | require('json2xlsx').write('name.xlsx', 'sheetname', null, ['first_col_name', 'second_col_name'])
+````
