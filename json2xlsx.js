@@ -10,7 +10,7 @@ if (process.argv[2])
   readXLSX(process.argv[2]);
 
 function readXLSX(filename) {
-  console.log(require('XLSX').readFile(filename).Sheets);
+  return require('XLSX').readFile(filename).Sheets;
 }
 
 function writeXLSX(filename, sheetname, obj, order) {
