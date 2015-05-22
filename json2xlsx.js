@@ -1,24 +1,18 @@
 #!/usr/bin/env node
 
-if (module && module.exports)
-  module.exports = {
-    write: writeXLSX,
-    read: readXLSX
-  }
+var xlsx = require('xlsx'),
+    fs = require('fs');
 
 if (process.argv[2])
   readXLSX(process.argv[2]);
 
 function readXLSX(filename) {
-  return require('XLSX').readFile(filename).Sheets;
+  return require('xlsx').readFile(filename).Sheets;
 }
 
 function writeXLSX(filename, sheetname, obj, order) {
 
   if (process.env.debug) console.log(arguments);
-
-  XLSX = require('xlsx');
-  FS = require('fs');
 
   if (!obj) {
     var indata = '';
@@ -54,7 +48,7 @@ function writeXLSX(filename, sheetname, obj, order) {
     } else {
       o = t;
     }
-    var wb = FS.existsSync(filename) ? XLSX.readFile(filename) : new Workbook();
+    var wb = fs.existsSync(filename) ? xlsx.readFile(filename) : new Workbook();
 
     for (ws_name in o) {
       var sheetdispname = sheetname || ws_name;
@@ -69,7 +63,7 @@ function writeXLSX(filename, sheetname, obj, order) {
       if (process.env.debug)
         console.log(filename, '/', sheetdispname);
     }
-    XLSX.writeFile(wb, filename);
+    xlsx.writeFile(wb, filename);
   }
 
   function convertObjArray(objarray) {
@@ -120,7 +114,7 @@ function writeXLSX(filename, sheetname, obj, order) {
           v: data[R][C]
         };
         if (cell.v == null) continue;
-        var cell_ref = XLSX.utils.encode_cell({
+        var cell_ref = xlsx.utils.encode_cell({
           c: C,
           r: R
         });
@@ -129,14 +123,14 @@ function writeXLSX(filename, sheetname, obj, order) {
         else if (typeof cell.v === 'boolean') cell.t = 'b';
         else if (cell.v instanceof Date) {
           cell.t = 'n';
-          cell.z = XLSX.SSF._table[14];
+          cell.z = xlsx.SSF._table[14];
           cell.v = datenum(cell.v);
         } else cell.t = 's';
 
         ws[cell_ref] = cell;
       }
     }
-    if (range.s.c < 10000000) ws['!ref'] = XLSX.utils.encode_range(range);
+    if (range.s.c < 10000000) ws['!ref'] = xlsx.utils.encode_range(range);
     return ws;
   }
 
@@ -164,4 +158,11 @@ function writeXLSX(filename, sheetname, obj, order) {
     this.Sheets = {};
   }
 
+}
+
+if (module && module.exports) {
+  module.exports = {
+    write: writeXLSX,
+    read: readXLSX
+  };
 }
