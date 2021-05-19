@@ -3,8 +3,15 @@
 var xlsx = require('xlsx'),
     fs = require('fs');
 
-if (process.argv[2])
-  readXLSX(process.argv[2]);
+if (process.argv[2]){
+  try {
+    if (fs.existsSync(path)) {
+      readXLSX(process.argv[2]);
+    }
+  } catch(err) {
+    console.error(`The file "${process.argv[2]}" doesn't exists.`)
+  }
+}
 
 function readXLSX(filename) {
   return require('xlsx').readFile(filename).Sheets;
